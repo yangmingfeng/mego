@@ -17,29 +17,349 @@
 	<link href="index-small.css" rel="stylesheet" type="text/css"/>
 	<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#backup").bind("click",function(){
+		    	$('html,body').animate({scrollTop: '0px'}, 800);
+		  	})
+			
+		    // $(function () {
+		            $(window).scroll(function () {    
+		                if ($(window).scrollTop() > 103 && document.body.clientWidth > 768) {     
+		                    $('#backup').css('display','block');    
+		                }    
+			            else {     
+			                $('#backup').css('display','none');    
+			            }    
+		        });    
+		    // });    
+
+
+            $('#submit').click(function() {
+                var d = {};
+                var t = $('form').serializeArray();
+                //t的值为[{name: "a1", value: "xx"},
+                //{name: "a2", value: "xx"}...]
+                $.each(t, function() {
+                    d[this.name] = this.value;
+                    if (this.value == '' || this.value == null) {
+                        let columnname = this.name;
+                        $('input[name='+columnname+']').addClass('redbox');
+                        if (columnname === 'remark') {
+                            console.log("true");
+                            $('textarea[name='+columnname+']').addClass('redbox');
+                        }
+                    }
+                });
+                // console.log(JSON.stringify(d));
+            });
+
+		})
 	</script>
 </head>
 
 <body>
-    <!-- 页面头部分	 -->
-    <header class="header">
+<!-- 页面头部分	 -->
+<header class="header" id="header">
+    <div class="headercontent">
     	<div class="logo">
     		<img src="images/logo.png"/>
     	</div>
 		<div class="menu">
 			<ul>
 			<li><a href="#" class="selected">首页</a></li>
-			<li><a href="#">产品</a></li>
-            <li><a href="#">解决方案</a></li>
-			<li><a href="#">关于</a></li>
+			<li><a href="news.html">新闻</a></li>
+			<!-- <li><a href="#">产品</a></li>
+            <li><a href="#">解决方案<img src="images/down.svg"></a></li> -->
+			<li><a href="about.html">关于</a></li>
 		  </ul>
 		 </div>
         <div class="consult">
-        	<img src="images/consult.svg"><span>在线咨询</span>
+        	<a href="#linkRight"><img src="images/consult.svg"/><span>在线咨询</span></a>
         </div>
-	</header>
+    </div>
+    <div class="arrow">
+    	<a href="#" class="arrowleft"><img src="images/arrowleft.svg"/></a>
+    	<a href="#" class="arrowright"><img src="images/arrowright.svg"/></a>
+    </div>
+    <div class="circle">
+    	<ul>
+    	<li><a href="#" class="circleleft"></a></li>
+    	<li><a href="#" class="circleright"></a></li><!-- 选中点 -->
+      </ul>
+    </div>
+</header>
+
+<div class="product">
+	<h5 class="title">自主研发产品</h5>
+	<div class="titleEnglish">Independently Developed Products</div>
+	<div class="productImg">
+		<ul>
+			<li>
+				<a href="#">
+                <img src="images/z1.png">
+				<div class="shows">
+					<div class="showAdd"><img src="images/add.svg"></div>
+					<div class="showWord">
+						<p class="fid">RFID智能餐托</p>
+						<p class="fidEn">rfid smart meal tray</p>
+					</div>
+			    </div>
+			</a>  
+			<h3>RFID智能餐托</h3>
+		  </li>
+			<li>
+				<a href="#">
+				<img src="images/z2.png">
+				<div href="#" class="shows">
+					<div class="showAdd"><img src="images/add.svg"></div>
+					<div class="showWord">
+						<p class="fid">智能重力传感器</p>
+						<p class="fidEn">intelligent gravity sensor</p>
+					</div>
+			    </div>
+			   </a>
+			 <h3>智能重力传感器</h3>
+			</li>
+			<li>
+				<a href="#">
+				<img src="images/z3.png">
+				<div href="#" class="shows">
+					<div class="showAdd"><img src="images/add.svg"></div>
+					<div class="showWord">
+						<p class="fid">开门自取式智能柜</p>
+						<p class="fidEn">open door self access intelligent cabinet</p>
+					</div>
+			    </div>
+			</a>
+			<h3>开门自取式智能柜</h3>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="restaurant">
+	<div class="restaurantImg"></div>
+	<a href="#">
+		<div class="circlePlayInner">
+		  <img src="images/play.svg">
+	    </div>
+	</a>
+	<div class="megoRestaurant">
+		<h5 class="title">米果智慧餐厅</h5>
+		<div class="titleEnglish">Me Go Smart Restaurant</div>
+		<p>智慧餐厅通过软硬件系统集成，在饭堂部署后，可实现自动结算、消费者自助大餐、云端电子卡等功能，能大幅度提高运营效率、节省人力成本、提升就餐员工满意度。</p>
+		<a href="#">
+		<div class="more">MORE &nbsp;></div>
+		</a>
+	</div>
+	<div class="demonstrationUnit">
+		<ul>
+			<li><a href="#">钱大妈菜吧</a></li>
+			<li>|</li>
+			<li><a href="#">正大集团</a></li>
+			<li>|</li>
+			<li><a href="#">乐禾食品集团</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="show">
+	<div class="caseShow">
+		<h4>案例展示</h4><span class="titleEnglish">Case Show</span> <span class="megoTitle">/ 米果微超</span>
+	</div>
+	<div class="example">
+		<ul>
+			<li><a href="#">
+				<img src="images/1.png">
+				<h4 class="ellipsis">钱大妈智能菜吧</h4>
+				<p>取诸新鲜，还要新鲜，把新鲜优质食材送到百姓餐桌上</p>
+			</a></li>
+			<li><a href="#">
+				<img src="images/1.png">
+				<h4 class="ellipsis">正大泰友微超</h4>
+				<p>取诸新鲜，还要新鲜，把新鲜优质食材送到百姓餐桌上</p>
+			</a></li>
+			<li><a href="#">
+				<img src="images/2.png">
+				<h4 class="ellipsis">乐禾食品集团</h4>
+				<p>取诸新鲜，还要新鲜，把新鲜优质食材送到百姓餐桌上</p>
+			</a></li>
+		</ul>
+	</div>
+</div>
 
 
+<div class="solve">
+	<div class="content">
+		<div class="title">解决什么问题</div>
+		<div class="titleEnglish">What Problem To Solve</div>
+		<div class="solveList">
+		<ul>
+			<li><img src="images/icon.svg">
+				<p>自助打餐、无感自动结算</p>
+				<p>可节省30%以上人力成本</p></li>
+			<li><img src="images/icon.svg">
+				<p>运营数据更直观，经营报表</p>
+				<p>全面，实现供需精准化</p></li>
+			<li><img src="images/icon.svg">
+				<p>集成明厨亮灶，菜品留样</p>
+				<p>管理，强化食品安全管控</p></li>
+		</ul>
+		<ul>
+			<li><img src="images/icon.svg">
+				<p>减少员工高峰期就餐排队</p>
+			<p>时间、提升用餐体验舒适度</p></li>
+			<li><img src="images/icon.svg">
+				<p>云端电子卡支付方式更</p>
+			<p>先进、更安全、更高效</p></li>
+			<li><img src="images/icon.svg">
+				<p>集成米果微超智能柜，直接</p>
+			<p>扫码消费，丰富员工福利</p></li>
+		</ul>
+		<ul>
+			<li><img src="images/icon.svg">
+				<p>选择更丰富，吃多少打多少</p><p>减少浪费，实现光盘行动</p></li>
+			<li><img src="images/icon.svg">
+				<p>兼容全自助或半自助</p><p>可按份、按数量，可按次数</p></li>
+			<li><img src="images/icon.svg">
+				<p>支持营养管理、线上点餐</p><p>等增值功能拓展</p></li>
+		</ul>
+	</div>
+	</div>
+	<div class="experience">
+		<ul>
+			<li><span class="number">13</span><span class="year">年</span></li>
+			<li>餐饮运管经验</li>
+			<li>Catering Operations Experience</li>
+		</ul>
+		<ul>
+			<li><span class="number">8</span><span class="year">年</span></li>
+			<li>团队平均经验</li>
+			<li>Team Average Experience</li>
+		</ul>
+		<ul>
+			<li><span class="number">3</span><span class="year">年</span></li>
+			<li>智能硬件研发</li>
+			<li>Intelligent Hardware Development</li>
+		</ul>
+		<ul>
+			<li><span class="number">9</span><span class="year">项</span></li>
+			<li>国家专利证书</li>
+			<li>National Patent Certificate</li>
+		</ul>
+	</div>
+</div>
+
+<div class="news">
+	<h5 class="title">新闻资讯</h5>
+	<div class="titleEnglish">News Information</div>
+	<div class="newsSwitch">
+		<span class="companyDynamics orangeColor">企业新闻<i></i><!-- i标签三角图标 --></span>
+		<span class="industryNews">行业新闻</span>
+	</div>
+	<div class="newsList">
+		<ul>
+			<li><a href="newsdetail.html">
+				<img src="images/3.png">
+				<div class="content">
+					<h3 class="ellipsis">乐禾入选广东省重点农业龙头企业</h3>
+					<p>近日，广东省农业农村厅公布了广东省重点农业龙头企业名单，乐禾食品集团股份有限公司顺利通过评审和复核，脱颖而出入选广东省重点农业龙头企业。</p>
+					<div class="date">2020-01-02
+					<div class="underline"></div><!-- 下划线 -->
+			    </div>
+				</a>
+		    </li>
+		    <li><a href="newsdetail.html">
+		    	<img src="images/3.png">
+		    	<div class="content">
+				<h3 class="ellipsis">乐禾入选广东省重点农业龙头企业</h3>
+				<p>近日，广东省农业农村厅公布了广东省重点农业龙头企业名单，乐禾食品集团股份有限公司顺利通过评审和复核，脱颖而出入选广东省重点农业龙头企业。</p>
+				<div class="date">2020-01-02
+					<div class="underline"></div><!-- 下划线 -->
+			    </div>
+				</a>
+		    </li>
+		    <li><a href="newsdetail.html">
+		    	<img src="images/3.png">
+		    	<div class="content">
+				<h3 class="ellipsis">乐禾入选广东省重点农业龙头企业</h3>
+				<p>近日，广东省农业农村厅公布了广东省重点农业龙头企业名单，乐禾食品集团股份有限公司顺利通过评审和复核，脱颖而出入选广东省重点农业龙头企业。</p>
+				<div class="date">2020-01-02
+					<div class="underline"></div><!-- 下划线 -->
+			    </div>
+				</a>
+		    </li>
+		</ul>
+		<!-- <img src="images/nodata.png"> --> <!-- 没有内容显示这张图片-->
+	</div>
+	<a href="news.html" class="newsMore">
+	<div class="more"> MORE &nbsp;> </div>
+	</a>
+</div>
+
+<div class="aboutUs">
+	<div class="aboutUsMain">
+	<div class="us"><h3>了解我们</h3><span>Understand Us</span></div>
+	<p><span>米果智能</span>是<span>乐禾食品集团</span>旗下科技事业部，主要围绕食品相关行业，研发智能化、自动化设备，以提高生产、经营效率、打造科技乐禾。</p>
+	<p>米果智能潜心专注研发，已申请多个专利及软件著作权保护。已推出“米果智慧餐厅”及“米果微超”等智能产品。智慧餐厅通过软硬件系统集成，在饭堂部署后，可实现自动结算、消费者打餐、云端电子卡等功能，能大幅度提高运营效率、节省人力成本、提升就餐员工满意度。</p>
+	<a href="#">
+	<div class="more"> MORE &nbsp;> </div>
+	</a>
+	</div>
+</div>
+
+<div class="link">
+	<div class="linkLeft">
+		<div class="linkDetail">
+		<h4>广州米果智能设备有限公司</h4>
+		<ul>
+			<li>邮件: 510168</li>
+			<li>邮箱: ymy2017@qq.com</li>
+			<li>网址: http://www.megoai.com</li>
+			<li>地址: 广州市白云区金沙洲横沙球场西街2号米果智能</li>
+		</ul>
+	  </div>
+		<div class="phone">
+			<ul>
+				<li>(86)020 - 8198 0471</li>
+				<li>工作时间: AM 9:00 - PM 21:00</li>
+				<li>135 1271 0618 / 137 9443 6363</li>
+				<li>杨先生 / 程先生</li>
+			</ul>
+		</div>
+		<div class="linkImg">
+			<ul>
+				<li><img src="images/alipay.png">
+					<p>支付宝关注</p></li>
+				<li><img src="images/wechat.png">
+					<p>微信关注</p></li>
+			</ul>
+		</div>
+	</div>
+	<div class="linkRight" id="linkRight">
+		<h3>在线咨询</h3>
+		<div class="englishConsult">Online Consulting</div>
+		<form action="#formId" post="get" id="formId">
+			<ul>
+			<li><input type="text" name="name" placeholder="姓名"></li>
+			<li><input type="text" name="name" placeholder="邮箱"></li>
+			<li><input type="text" name="name" placeholder="手机号"></li>
+			
+			<li><textarea type="text" name="remark" placeholder="想咨询些什么..."></textarea></li>
+		    <li><input type="submit" placeholder="提交" id="submit"></li>
+		    </ul>
+		</form>
+	</div>
+</div>
+
+<footer>
+	CopyRight © 2017-2020&nbsp;&nbsp;米果智能&nbsp;&nbsp;版权所有&nbsp;&nbsp;粤ICP备15101694号
+</footer>
+
+<div class="backup" id="backup" style="display: none;">
+  <a href="#header"><!-- &#8593; --><img src="images/top.svg"></a>
+</div>
 
 </body>
+
 </html>

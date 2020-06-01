@@ -1,7 +1,7 @@
 /* 样式 */
 /* css初始化 */
 html,body {
-	font-size: 20px;
+	font-size: 20px;	
 }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,span,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;list-style:none;-webkit-text-size-adjust:none;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}
 .normalfont {
@@ -18,29 +18,1033 @@ input {
 	border: 0;  /* 所有的表单边框为0 */
 	box-sizing: border-box; /* CSS3盒子模型 border 和 padding 都包含到 width 里面去 */
 }
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/* 公共部分start */
+ .menu ul li, .newsSwitch .industryNews, .certificate .title p,
+ .headercontent .consult span {
+	font-size: .75rem;
+}
+.product .titleEnglish, .megoRestaurant p, .megoRestaurant .more, .demonstrationUnit ul li, .caseShow .titleEnglish,
+.caseShow .megoTitle, .solve .content .titleEnglish, .experience ul li:nth-child(2), .experience ul li:nth-child(3),
+.news .titleEnglish, .newsSwitch .companyDynamics, .news .more, .aboutUs .us span, .aboutUs p, .aboutUs .more, .linkLeft ul,
+.linkRight .englishConsult, .linkRight ul li input[type='text'], .science p, .we .content .main p, .who .mid, .teamContent .momentEn,
+.teamContent p, .experienceAbout ul li:nth-child(2), .experienceAbout ul li:nth-child(3), .certificate .title p, footer {
+    font-size: .7rem;
+}
+.productImg ul li h3, .megoRestaurant .titleEnglish, .example ul li h4, .solve .content ul li p, .newsList h3, .experienceAbout .year,
+.experience .year, .productImg ul li a .fid, .productImg ul li a .fidEn {
+    font-size: .8rem;
+}
+.product .title, .megoRestaurant .title, .caseShow h4, .solve .content .title,.certificate h3,
+.linkLeft h4, .news .title, .aboutUs h3, .linkRight h3, .teamContent h3 {
+    font-size: 1.3rem;
+}
+.example ul li p, .newsList p, .newsList .date, .protect {
+	font-size: .6rem;
+} 
+ .product, .megoRestaurant, .megoRestaurant p, .experience,.news, .link, .certificate,
+ .experienceAbout, .show, .solve .team .teamContent, .protect, .newstitle, .newsposition,
+ .morenews {
+    width: 80%;
+}
+.we {
+    width: 70%;
+}
+ .product, .productImg ul li .showAdd img, .megoRestaurant, .megoRestaurant p, .demonstrationUnit ul, .show, .experience,
+ .news, .link, .we, .solve .team .teamContent, .certificate, .experienceAbout, .newsposition {
+ 	margin: 0 auto;
+ }
+ .headercontent, .arrow, .productImg ul, .demonstrationUnit ul, .example ul, .solve .content .solveList, 
+ .newsList ul, .link, .linkLeft .linkImg ul, .solve .team ul, .certificate ul {
+ 	display:-webkit-flex; 
+    display:-moz-box;
+    display:-mz-flexbox;
+	display: flex;
+	justify-content: space-between;
+ }
+ .circle ul {
+ 	display:-webkit-flex; 
+    display:-moz-box;
+    display:-mz-flexbox;
+ 	display: flex;
+	justify-content: center;
+ }
+ .experience, .experienceAbout {
+ 	display:-webkit-flex; 
+    display:-moz-box;
+    display:-mz-flexbox;
+ 	display: flex;
+	justify-content: space-around;
+ }
+ .megoRestaurant .more, .more, .news .more, .aboutUs a {
+	width: 9.35rem;
+    height: 2rem;
+}
+/* 公共部分start */
+
+ /* 头部start */
 .header {
-	height: 47rem;
+	height: 40rem;
 	background: url('images/slider.jpg') no-repeat;
 	background-size: 100% 100%;
-}	
-.logo img {
-	width: 4rem;
-	height: 1.5rem;
-	float: left;
 }
-.menu {
-	margin: 0 auto;
+.headercontent {
+	margin: 0 3.6rem;
+	padding-top: 1.75rem;
+}
+.logo img {
+	margin-top: -.4rem;
+}
+.logo img {
+	width: 5rem;
+	height: 1.75rem;	
 }
 .menu ul li {
 	float: left;
+	padding: 0 2.2rem;
 }
 .menu ul li a, .consult span {
     color: #FCFCFC;
 }
-.consult {
-	float: right;
+.menu ul li a:hover {
+	color: #fd6c01;
 }
-.consult img {
-	width: 1rem;
-	height: 1rem;
+.menu ul li img {
+	width: .8rem;
+    position: relative;
+    top: .2rem;
+    left: .2rem;
 }
+.selected {
+	color: #fd6c01 !important;
+	border-bottom: .1rem solid #fd6c01;
+	padding-bottom: .4rem;
+}
+.headercontent .consult {
+	width: 6rem;
+	height: 2rem;
+	border-radius: 1.2rem;
+  	background-color: rgba(212,212,212,.2);
+    background-position: .1rem .1rem;
+    position: relative;
+    top: -.5rem;
+}
+.headercontent .consult:hover {
+	background-color: rgba(255, 233, 173, 0.2);
+}
+.headercontent .consult img {
+	width: .8rem;
+    height: .8rem;
+    padding: .5rem 0 0 .9rem;
+    position: relative;
+    top: .1rem;
+}
+.headercontent .consult span {
+	position: relative;
+    left: .4rem;
+    top: -.05rem;
+}
+.arrow {
+	margin: 16.1rem 2rem 13.9rem 2rem;
+}
+.arrow a {
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(10,10,10,.3);
+    display: inline-block;
+    border-radius: .25rem;
+}
+.arrow img {
+    width: .88rem;
+    height: .88rem;
+    padding: .55rem 0 0 .55rem;
+}
+.circle {
+	text-align: center;
+	padding-top: 1.5rem;
+}
+.circle ul li {
+	margin: 0 .8rem;
+	line-height: 1rem; 
+}
+.circleleft, .circleright {
+	width: .5rem;
+	height: .5rem;
+	border-radius: 2.5rem;
+	display: inline-block;
+    position: relative;
+	top: -.15rem;
+}
+.circleleft {
+    background-color: #FCFCFC;
+    margin-bottom: .15rem;
+}
+.circleright {
+    background-color: #fd6c01;
+    border: .3rem solid #7f776c;
+}
+ /* 头部end */
+ /* 产品start */
+ .product {
+    text-align: center;
+    margin-top: 3.3rem;
+}
+.product .title, .news .title {
+	color: #516685;
+	font-weight: normal;
+	letter-spacing: .1rem;
+}
+.product .titleEnglish, .news .titleEnglish  {
+	color: #aaaaaa;
+	margin: .9rem 0 2.5rem 0;
+}
+.productImg ul li {
+	flex: 0 0 33.333333333333%;
+	position: relative;
+}
+.productImg ul li a {
+	position: relative;
+	display: block;
+}
+.productImg ul li img {
+    width: 100%;
+    display: block;
+}
+.productImg ul li .showAdd img {
+	width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 4.5rem;
+}
+.productImg ul li .shows {
+	display: none;
+	position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.productImg ul li h3 {
+	padding-top: 1.3rem;
+	padding-bottom: 2.6rem;
+}
+.productImg ul li a .fid {
+	color: #feffff;
+    margin-top: 1rem;
+}
+.productImg ul li a .fidEn {
+    color: #aaacab;
+}
+
+.productImg ul li:hover .shows {
+	display: block;
+	background-color: rgba(0,0,0,.5);
+}
+.productImg ul li .shows .showWord {
+	margin-top: 1.9rem;
+}
+ /* 产品end */
+ /* 餐厅start */
+ .restaurant {
+ 	position: relative;
+ }
+ .restaurantImg {
+ 	height: 24.5rem;
+ 	background: url('images/restaurant.jpg');
+ 	background-size: cover;
+ }
+.circlePlayInner {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    border-radius: 2.5rem;
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    top: 15%;
+    left: 47%;
+    border: .5rem solid rgba(255,255,255,.6);
+}
+.circlePlayInner:hover {
+    background-color: rgba(206, 160, 30, 0.6);
+}
+.circlePlayInner img {
+    width: 50%;
+}
+.restaurant {
+	text-align: center;
+}
+.megoRestaurant {
+	height: 15.35rem;
+	background-color: #30b856;
+	position: relative;
+	top: -10rem;
+	border-radius: .5rem;
+	color: #FCFCFC;
+	box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.05);
+}
+.megoRestaurant .title {
+	font-weight: normal;
+	padding-top: 2.1rem;
+}
+.megoRestaurant .titleEnglish { 
+	padding-bottom: 1.15rem;
+}
+.megoRestaurant p {
+	line-height: 1.5rem;
+	height: 1.8rem;
+	display: inline-block;
+}
+.megoRestaurant .more {
+	margin: 2.1rem auto;
+    border-radius: 1.25rem;
+    border: 1px solid #FCFCFC;
+    color: #FCFCFC;
+    line-height: 2rem;
+}
+.megoRestaurant .more:hover {
+	border: 1px solid #f4ff4f;
+	color: #f4ff4f;
+}
+.demonstrationUnit {
+	margin-top: -8rem;
+}
+.demonstrationUnit ul {
+	width: 14.55rem;
+}
+.demonstrationUnit ul li {
+	padding: 0 .1rem;
+}
+.demonstrationUnit li, .demonstrationUnit ul li a {
+	color: #4f6685;
+}
+/* 餐厅end */
+/* 案例展示start */
+.show {
+	padding: 4rem 0;
+}
+.caseShow h4 {
+	display: inline-block;
+	color: #516685;
+}
+.caseShow .titleEnglish {
+	margin-left: 1rem;
+	color: #a9a9a9; 
+}
+.caseShow .megoTitle {
+	color: #999999; 
+}
+.example {
+	margin-top: 2rem;
+}
+.example ul li {
+	padding-right: 2.25rem;
+}
+.example ul li:nth-child(3n+3) {
+	padding-right: 0;
+}
+.example ul li a {
+	display: block;
+}
+.example ul li img {
+	width: 100%;
+}
+.example ul li h4 {
+	color: #000000;
+	padding: .6rem .4rem .4rem .4rem;
+}
+.example ul li p {
+	width: 95%;
+	padding-left: .4rem;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.solve .content {
+	background: url('images/advantages.jpg');
+	background-size: cover;
+	text-align: center;
+	padding: 0 5rem;
+	color: #FCFCFC;
+}
+.solve .content .title {
+	padding-top: 3rem;
+}
+.solve .content .titleEnglish {
+	padding-top: .5rem;
+    color: #aba9aa;
+}
+.solve .content .solveList {
+    padding: 3rem 5rem 5rem 5rem;
+}
+.solve .content ul {
+	padding: 0 .5rem;
+    flex: 0 0 34%;
+}
+.solve .content ul:first-child, .solve .content ul:nth-child(2) {
+	border-right: 1px solid #4b6e84;
+}
+.solve .content ul li {
+	padding: 2rem;
+	border-bottom: 1px solid #4b6e84;
+}
+.solve .content ul li:nth-child(3) {
+	border-bottom: none;
+}
+.solve .content ul li img {
+	padding-bottom: .5rem;
+	width: 2.8rem;
+    height: 2.25rem;
+}
+.solve .content ul li p {
+    opacity: .8;
+    padding: .2rem 0;
+}
+.experience {
+	border-radius: .6rem;
+	box-shadow: 0 .2rem 1.2rem rgba(0,0,0,0.05);
+	margin-top: -3.5rem;
+	background: #FCFCFC;
+	text-align: center;
+	padding: 1rem 0 1.5rem 0;
+}
+.experience .number, .experienceAbout .number {
+	color: #fd6c01;
+	font-size: 3.6rem;
+	font-weight: 100;
+}
+.experience .year, .experienceAbout .year {
+	color: #fcb57f;
+}
+.experience ul li:nth-child(3) {
+	color: #8a8a8a;
+	padding-top: .2rem;
+}
+/* 案例展示厅end */
+/* 新闻start */
+.news .title, .news .titleEnglish {
+	text-align: center;
+}
+.news .title {
+	padding-top: 4rem;
+}
+.newsSwitch {
+    color: #aaaaaa;
+}
+.newsSwitch .companyDynamics {
+	padding-left: .2rem;
+}
+.newsSwitch .industryNews {
+	padding-left: 2rem;
+}
+.orangeColor {
+	color: #fd6c03;
+}
+.newsSwitch i {
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 7px solid transparent;
+	border-top: 7px solid #fd6c01;
+	position: relative;
+	top: .65rem;
+	left: .4rem;
+}
+.newsList {
+	padding-top: 1.5rem;
+}
+
+.newsList ul li {
+   width: 31%;
+}
+.newsList ul li:hover {
+	box-shadow: 0 .2rem 1.2rem rgba(0, 0, 0, .05);
+	border-radius: .7rem;
+	color: #fd6c03;
+}
+.newsList ul li:hover h3, .newsList ul li:hover .date {
+	color: #fd6c03;
+}
+.newsList ul li:hover .underline {
+	border: 1px solid #fd6c03;
+}
+.newsList ul li img {
+	width: 100%;
+    border-radius: .7rem;
+}
+.newsList .content {
+    padding: .8rem .8rem 1rem .8rem;
+}
+.newsList h3 {
+    font-weight: normal;
+    padding-bottom: .8rem;
+}
+.newsList p {
+	color: #aaaaaa;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2; /* 显示三行，后面省略 */
+	overflow: hidden;
+	letter-spacing: .1rem;
+
+}
+.newsList .date {
+	padding-top: 4.5rem;
+}
+.newsList .underline {
+	margin-top: .4rem;
+	width: 2.3rem;
+	height: 0.05rem;
+	border: 1px solid #aaaaaa;
+}
+.news .more {
+	margin: 3.5rem auto;
+	text-align: center;
+	padding-top: .5rem;
+	border-radius: 2.8rem;
+	border: 1px solid #ececec;
+}
+.news .more:hover{
+	color: #30b856;
+	border: 1px solid #30b856;
+}
+/* 新闻end */
+/* 了解我们start */
+.aboutUs {
+	background: url('images/aboutus.jpg') right;
+	background-size: cover;
+	overflow: hidden;
+}
+.aboutUsMain {
+	position: relative;
+	left: 10%;
+}
+.aboutUs h3, .aboutUs p {
+	padding-top: 2.5rem;
+}
+.aboutUs h3 {
+	color: #516685;
+	display: inline-block;
+}
+.aboutUs .us span {
+	color: #aaaaaa;
+	padding-left: 1.2rem;
+}
+.aboutUs p {
+	color: #596c8a;
+	width: 45%;
+	text-indent: 1.5rem;
+	letter-spacing: .05rem;
+	line-height: 1.5rem;
+}
+.aboutUs p span {
+	color: #fd6c03;
+}
+.aboutUs a {
+    display: block;
+    margin: 2.35rem 0 2.5rem 0;
+    color: #aaaaaa;
+    background: #FCFCFC;
+    border: 1px solid #ececec;
+    border-radius: 2.6rem;
+}
+.aboutUs a:hover {
+    color: #30b856;
+	border: 1px solid #30b856;
+}
+.aboutUs a:visited .aboutUs {
+    background: url('images/aboutbg.jpg') no-repeat;
+}
+.aboutUs .more {
+    padding: 0.6rem 0 0 3.3rem;
+}
+/* 了解我们end */
+/* 联系start */
+.link {
+	padding: 4rem 0;
+}
+.linkLeft h4 {
+	color: #516685;
+	font-size: 1rem;
+}
+.linkLeft ul {
+	padding: 1rem 0;
+	color: #aaaaaa;
+	line-height: 1.5rem;
+}
+.linkLeft .linkDetail ul {
+ 	border-bottom: 1px solid #dadada;
+}
+.linkLeft .phone ul li:first-child, .linkLeft .phone ul li:nth-child(3){
+	color: #516685;
+	font-size: 1rem;
+}
+.linkLeft .phone ul li:nth-child(2){
+	padding-bottom: 1rem;
+}
+.linkLeft .linkImg ul img {
+	width: 6.6rem;
+	height: 6.6rem;
+}
+.linkLeft .linkImg ul p {
+	text-align: center;
+	color: #333333;
+}
+.linkRight {
+	width: 50%
+}
+.linkRight h3 {
+	color: #516685;
+    letter-spacing: 0.2rem;
+}
+.linkRight .englishConsult {
+	color: #aaaaaa;
+	padding: .5rem 0 1.5rem 0;
+}
+.linkRight form {
+  	border-top: 1px solid #f0f0f0;
+  	padding-top: 1.5rem;
+}
+.linkRight ul li {
+	width: 100%;
+	background: #f9f9f9;
+	border-radius: .3rem;
+	margin: .8rem 0;
+}
+.linkRight ul li input[type='text'] {
+	width: 100%;
+	height: 2.3rem;
+	background: #f9f9f9;
+	padding-left: 1rem;
+}
+.linkRight ul li:nth-child(4), .linkRight ul li textarea {
+	height: 6.5rem;
+}
+.linkRight ul li textarea {
+	width: 100%;
+	background: #f9f9f9;
+	font-size: .8rem;
+	resize: none;
+    border: none;
+    padding: 1rem 0 0 1rem; 
+}
+.linkRight ul li:nth-child(5), .linkRight ul li:nth-child(5) input {
+	width: 8.5rem;
+}
+.linkRight ul li:nth-child(5) {
+	background: #f9f9f9;
+	text-align: center;
+	line-height: 2.2rem;
+	margin-top: 2rem;
+}
+.linkRight ul li:nth-child(5) input {
+	height: 2.5rem;
+	font-size: .9rem;
+	color: #999999;
+	background: none;
+}
+/* 联系end */
+footer {
+	background: #262e39;
+	color: #bfc0c5;
+	text-align: center;
+	padding: .7rem 0; 
+}
+.backup a {
+	font-size: 1.2rem;
+	color: #FCFCFC; 
+	font-weight: bold;
+}
+.backup {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    position: fixed;
+    right: 1rem;
+    bottom: 2rem;
+    z-index: 999;
+    background: rgba(0,0,0,0.5);
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: .15rem;
+}
+.backup img {
+	width: 22px;
+	height: 22px;
+	font-weight: bold;
+	padding-top: .38rem;
+}
+/**没有填值表单红框**/
+.redbox {
+	border: 1px solid red!important;
+}
+/**关于start**/
+.aboutbg {
+	height: 17.5rem;
+	background: url('images/aboutbg.jpg') no-repeat;
+	background-size: 100% 100%;
+}
+.science {
+	text-align: center;
+	margin-top: 5rem;
+    color: #FCFCFC;
+}
+.science h3, .newstitle h3 {
+	font-size: 2.4rem;
+	font-weight: normal;
+	letter-spacing: .2rem;
+}
+.science p {
+	margin-top: 1rem;
+}
+.we {
+	text-align: center;
+}
+.we .who {
+	color: #aaaaaa;
+	margin: -2.5rem 0 2.2rem 0;
+}
+.we .title {
+	font-size: 1.8rem;
+    padding-top: 1.5rem;
+    background: url(images/we.png) no-repeat center;
+    background-size: 70%;
+    height: 7rem;
+    background-position-y: top;
+}
+.we .lineLeft, .we .lineRight {
+	width: 3rem;
+	display: inline-block;
+	border: .5px solid #aaaaaa;
+	margin-bottom: .3rem;
+}
+.we .lineLeft {
+	margin-right: .4rem;
+}
+.we .lineRight {
+	margin-left: .4rem;
+}
+.we .content {
+	position: relative;
+	color: #596c8a;
+	padding-bottom: 3.5rem;
+}
+.we .content .main {
+	text-indent: 1.5rem;
+	text-align: left;
+	padding: 2rem 4rem;
+	line-height: 1.5rem;
+}
+.we .content p span {
+	color: #fd6c03;
+}
+.we .content .leftTop, .we .content .rightBottom {
+	position: absolute;
+	border: 5px solid #eff3f6;
+	width: 2.5rem;
+    height: 3rem;
+    display: block;
+}
+.we .content .leftTop {
+    border-right: none;
+    border-bottom: none;
+	
+}
+.we .content .rightBottom {
+	right: 0;
+	bottom: 3.5rem;   
+    border-left: none;
+    border-top: none;
+}
+.solve .team {
+	background: #f8f8f8;
+	height: 30rem;
+}
+.solve .team .teamContent {
+	color: #506584;
+}
+.teamContent h3 {
+	padding-top: 2.5rem;
+}
+.teamContent .momentEn {
+	color: #999999;
+	padding: .4rem 0 1rem 0;
+}
+.teamContent p {
+	padding-bottom: 4rem;
+}
+.solve .team ul li {
+	width: calc(25% - .5rem);
+}
+.solve .team ul li img {
+	width: 100%;
+	height: 9rem;
+}
+.certificate h3 {
+	font-weight: normal;
+	color: #506584;
+	margin-top: 3rem;
+}
+.certificate .title {
+	padding-bottom: 3rem;
+}
+.certificate .title p {
+	color: #8a8a8a;
+	margin-top: .4rem;
+}
+.protect {
+	margin: 0 auto;
+    text-align: center;
+    color: #fd6c03;
+    padding: 3rem 0;
+}
+.protect p {
+    background-color: rgb(255,255,255);
+    width: 22rem;
+    margin: 0 auto;
+}
+.protect p img {
+	width: 4rem;
+    position: relative;
+    left: 39%;
+}
+.protect p span {
+    position: relative;
+    top: -1.2rem;
+    left: -2rem;
+}
+.protect .protectLine {
+    border-bottom: .5px solid #f4f4f4;
+    position: relative;
+    top: -1.6rem;
+    z-index: -1;
+}
+.map {
+	height: 38rem;
+	background: url(images/map.jpg) no-repeat;
+	background-size: 100%;
+}
+.experienceAbout {
+	border-radius: .6rem;
+	box-shadow: 0 .2rem 1.2rem rgba(0,0,0,0.05);
+	margin-top: -4.5rem;
+	background: #FCFCFC;
+	text-align: center;
+	padding: 1rem 0 1.5rem 0;
+}
+.experienceAbout ul {
+	padding-left: 2rem;
+}
+.experienceAbout ul:nth-child(4) {
+	padding-right: 2rem;
+}
+.experienceAbout ul li:nth-child(3) {
+	color: #8a8a8a;
+    padding-top: .4rem;
+}
+/**关于end**/
+/**新闻start**/
+.newstitle {
+	margin: 0 auto;
+	color: #FCFCFC;
+	padding: 4rem 0;
+}
+.newsbackgroup {
+	background-color: #f7f7f7;
+}
+.news, .morenews {
+	margin: 0 auto;
+	padding-bottom: 2.25rem;
+	overflow: hidden;
+}
+.news-information {
+	text-align: center;
+}
+.information-dynamic {
+	padding-top: 3.4rem;
+	margin-bottom: .5rem;
+}
+.news-content {
+	text-align: center;
+	overflow: hidden;
+}
+.news-content .module {
+	height: 6.3rem;
+    float: left;
+    width: 33%;
+    padding: 0 0 0 4rem;
+    position: relative;
+}
+.news-content .time {
+	width: 2.85rem;
+	position: absolute;
+	left: .5rem;
+}
+.news-content .content {
+	text-align: left;
+}
+.news-content .month {
+   font-size: 1rem;
+}
+.news-content .subject {
+   font-size: 1rem;
+   color: #272727;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.news-content .year {
+	margin-left: .7rem;
+	margin-top: .25rem;
+	color: #999999;
+}
+.news-content .introduction {
+	color: #999999;
+	margin-top: .7rem;
+	line-height: 1.4rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+   
+.news .moredynamic {
+	 text-align: center;
+	 background-color: #f7f7f7;
+	 overflow: hidden;
+	 width: 7.25rem;
+	 height: 2.15rem;
+	 border-radius: 1.3rem;
+	 background-color: #ffffff;
+	 margin: 0 auto;
+	 margin-top: 2.45rem;
+}
+.news .moredynamic span {
+	margin-top: .6rem;
+	display: inline-block;
+	color: #505679;
+}
+/***新闻start***/
+.newsposition {
+	border-bottom: 1px solid #e1e7ed;
+}
+.newsposition div {
+    margin: 0 auto; 
+    color: #8a8a8a;
+    line-height: 35px;
+}
+.news-list ul {
+	overflow: hidden;
+	padding-top: 2rem;
+}
+.news-list ul li {
+	padding: 0 2rem 2rem 4rem;
+    position: relative;
+    width: calc(50% - .1rem);
+    float: left;
+}
+.news-list ul li .news-date {
+	position: absolute;
+	left: 0;
+	color: #999;
+	text-align: center;
+}
+.news-list ul li .news-date p {
+	font-size: 1.1rem;
+	color: #000000;
+}
+.news-list ul li a {
+   color: #000000;
+}
+.news-list ul li h3 {
+	padding-bottom: .5rem;
+}
+.news-list ul li a h3 {
+	font-size: 1.1rem;
+	font-weight: normal;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.news-list ul li p {
+	font-size: .75rem;
+	line-height: 1.3rem;
+	color: #666;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.pagination {
+	text-align: center;
+	padding-bottom: 1.6rem;
+}
+.pagination a {
+	color: #505679;
+	border: 1px solid #505679;
+	padding: 2px;
+	font-size: .8rem;
+}
+.pagination a:hover {
+    border: 1px solid #b078dc;
+}
+.pagination .pagenumber {
+	width: 1.3rem;
+	display: inline-block;
+}
+.pagination .pagenumberselect {
+	color: #FCFCFC;
+	background-color: #505679;
+}
+/**新闻end**/
+
+/***新闻详情start***/
+.newsdetailtitle {
+	padding-top: 1.9rem;
+    margin-bottom: .5rem;
+    color: #272727;
+    /* font-size: 34px; */
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: normal;
+}
+.newsdetailtime {
+	color: #666666;
+	padding: .8rem 0 1.6rem;
+	border-bottom: 1px solid #e4e4e4;
+}
+.newsdetailcontent {
+    padding: 2.5rem 0 2.5rem;
+}
+.newsdetailcontent p {
+  	letter-spacing: .1rem;
+  	color: #333333;
+  	text-indent: 2em;
+  	line-height: 1.3rem;
+  	font-size: .75rem;
+}
+.newschapter {
+	line-height: 2.65rem;
+	overflow: hidden;
+	border-top: 1px solid #e4e4e4;
+}
+.previouschapter {
+	float: left;
+}
+.nextchapter {
+  	float: right;
+}
+.previouschapter a, .nextchapter a {
+	color: #333333;
+	font-size: .75rem;
+}
+/***新闻详情end***/
+
+

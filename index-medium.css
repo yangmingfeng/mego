@@ -2,6 +2,74 @@
 /*中屏幕  max-width: 1024px:宽度在768 - 1024    1046*/ 
 @media screen and (min-width: 768px) and (max-width: 1046px){
 
+/* .product, .megoRestaurant, .megoRestaurant p, .experience,.news, .link, .certificate,
+ .experienceAbout, .show, .solve .team .teamContent {
+    width: 90%;
+}*/
+.we {
+    width: 77%;
+}
+.headercontent {
+	margin: 0 1rem;
+}
+.menu ul li {
+    float: left;
+    padding: 0 1.4rem;
+}
+.example ul li img {
+    height: 6rem;
+}
+.megoRestaurant p {
+    width: 88%;
+}
+.demonstrationUnit ul {
+    width: 36%;
+}
+.solve .content ul li {
+    padding: .5rem;
+}
+.solve .team ul li img {
+    height: 7rem;
+}
+.experienceAbout ul {
+	padding: 0;
+}
+.certificate ul {
+	flex-flow: row wrap;
+    justify-content: flex-start;
+}
+.circlePlayInner {
+    left: 45%;
+}
+.aboutUs {
+    background: url(images/aboutus.jpg) no-repeat center;
+    background-size: 230%;
+}
+.aboutUsMain {
+	left: 0;
+}
+.aboutUs h3 {
+    padding: 2.5rem 0 0 4.5rem;
+}
+.aboutUs p {
+    width: 59%;
+    padding: 2.35rem 0 0 4.5rem;
+}
+.aboutUs a {
+    margin: 2.35rem 0 2.5rem 4.5rem;
+}
+.solve .team {
+    height: 27rem;
+}
+.newsList .date {
+    padding-top: 0.8rem;
+}
+.solve .content .solveList {
+    padding: 0;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+        
 
 
 }

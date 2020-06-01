@@ -1,8 +1,448 @@
 
 /*小屏幕  max-width: 768px:宽度在768以下 */ 
 @media screen and (max-width: 767px){
+ 
+/**全局start**/
+.product .title, .megoRestaurant .title, .caseShow h4, .solve .content .title,.certificate h3,
+.linkLeft h4, .news .title, .aboutUs h3, .linkRight h3, .teamContent h3 {
+    font-size: 1.1rem;
+}
+.example ul li h4 {
+    font-size: .7rem;
+}
+.experience ul li:nth-child(3), .experienceAbout ul li:nth-child(3) {
+	font-size: .6rem;
+}
+.protect, .solve {
+	width: 95%;
+}
+.product, .show, .news, .link, .aboutUsMain, .certificate, .we, .science,
+.newstitle, .newsposition, .morenews, .morenews, .pagination {
+    width: 88%;
+}
+.team .teamContent {
+	width: 90%!important;  /**问**/
+}
+.solve, .experience {
+	width: 100%;
+}
+.experience {
+	padding: 0 .5rem;
+}
+.logo, header .consult, .newsList ul li img, .headercontent .consult, .productImg ul li:hover .shows, .protect .protectLine {
+	display: none;
+}
+.news .more, .aboutUs a {
+    width: 6rem;
+    height: 1.8rem;
+}
+.solve, .pagination {
+    margin: 0 auto;
+}
+.solve .teamContent ul, .certificate ul {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+.solve .team ul li, .certificate ul li {
+    width: 49%;
+}
+/**全局end**/
+.header {
+    height: 12rem;
+}
+.headercontent {
+    padding-top: .8rem;
+    margin: 0 .5rem;
+}
+.menu ul li {
+    float: left;
+    padding: 0;
+    padding-left: 2.1rem;
+}
+.arrow {
+    margin: 3rem 0.5rem;
+}
+.product .title {
+	letter-spacing: 0rem;
+}
+.product {
+    margin-top: .8rem;
+}
+.product .titleEnglish, .news .titleEnglish {
+    margin: .4rem 0 .4rem 0;
+}
+.arrow img {
+    width: 1.2rem;
+    height: 1.2rem;
+    padding: .4rem 0 0 .4rem;
+}
+.circle {
+	padding-top: .8rem;
+}
+.circleleft, .circleright {
+    width: .5rem;
+    height: .5rem;
+}
+.circle ul li {
+    line-height: 1rem;
+}
+.circleright {
+    border: .25rem solid #7f776c;
+}
+.productImg ul li h3 {
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+    font-weight: normal;
+    font-size: .7rem;
+}
+.restaurantImg {
+    background: url(images/restaurant.jpg) no-repeat;
+    background-size: 100% 35%;
+}
+.circlePlayInner {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 15%;
+    left: 43%;
+    line-height: 2.1rem;
+    border: .3rem solid rgba(255,255,255,.6);
+}
+.megoRestaurant {
+	width: 100%;
+	border-radius: 0rem;
+    padding-bottom: .3rem;
+    top: -16.3rem;
+    height: auto;
+}
+.megoRestaurant .title {
+    padding-top: .9rem;
+}
+.megoRestaurant .titleEnglish {
+    padding-bottom: .2rem;
+}
+.megoRestaurant p {
+    width: 94%;
+    line-height: 1rem;
+}
+.megoRestaurant .more {
+    margin: .8rem auto;
+    width: 5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+}
+.demonstrationUnit {
+    margin-top: -15rem;
+}
+.demonstrationUnit ul {
+    width: 72%;
+}
+.show {
+    padding: 1rem 0 1rem 0;
+}
+.caseShow .titleEnglish {
+    margin-left: .4rem;
+}
+.example {
+    margin-top: 1rem;
+}
+.example ul li img {
+    height: 3.5rem;
+}
+.example ul li {
+    padding-right: 0.2rem;
+}
+.solve .content ul li img {
+	width: 2.5rem;
+    height: 1.5rem;
+    padding: .5rem 0;
+}
+.solve .content .title {
+	padding-top: 1rem;
+}
+.solve .content .solveList {
+    padding: 0;
+    padding: 1rem 0;
+}
+.solve .content ul li {
+    padding: .1rem;
+}
+.solve .content {
+    padding: 0 .5rem;
+}
+.solve .content ul li p {
+	padding: 0;
+	padding-bottom: .2rem;
+	font-size: .6rem;
+}
+.teamContent p {
+    padding-bottom: 2rem;
+}
+.experience {
+    margin-top: 0;
+    padding: 1rem .5rem;
+    box-shadow: none;
+}
+.experience .number, .experienceAbout .number {
+    font-size: 1.6rem;
+}
+.experience ul li:nth-child(2), .experienceAbout ul li:nth-child(2) {
+	font-size: .5rem;
+}
+.news .title {
+    padding-top: 1rem;
+    font-weight: bold;
+}
+.newsList {
+    padding-top: .5rem;
+}
+.newsList ul li img {
+    height: 18%;
+}
+.newsList ul {
+    flex-direction: column;
+}
+.newsList ul li {
+    width: 100%;
+}
+.newsList .date {
+    padding-top: 0.5rem;
+}
+.newsList .underline {
+    margin-top: .1rem;
+    margin-bottom: .8rem;
+}
+.newsList .content {
+    padding: .5rem .5rem 0 .5rem;
+}
+.news .more {
+    margin: .5rem auto;
+    padding-top: .45rem;
+}
+.news .newsMore {
+   display: block;
+   padding-bottom: 1rem;
+}
+.aboutUs {
+    background: url(images/aboutus.jpg) no-repeat;
+    background-size: 125% 98%;
+}
+.aboutUsMain {
+	left: 0;
+    margin: 0 auto;
+}	
+.aboutUs h3 {
+    padding: 1.2rem 0 0 1rem;
+}
+.aboutUs p {
+    width: 100%;
+    padding: .5rem .5rem 0 .5rem;
+    letter-spacing: 0rem;
+    line-height: 1.2rem;
+}
+.aboutUs a {
+	margin: 1rem auto;
+}
+.aboutUs .more {
+    padding: .5rem 0 0 1.5rem;
+}
+.link {
+	flex-direction: column;
+	padding: 1rem 0;
+}
+.linkLeft ul {
+    padding: .5rem 0;
+    line-height: 1.2rem;
+}
+.linkLeft .linkImg ul img {
+    width: 6rem;
+    height: 6rem;
+}
+.linkLeft .phone ul li:nth-child(2) {
+    padding-bottom: .5rem;
+}
+.linkRight {
+	width: 100%;
+	margin-top: 1rem;
+}
+.linkRight .englishConsult {
+    padding: .1rem 0 1rem 0;
+}
+.linkRight form {
+    padding-top: 0rem;
+}
+.linkRight ul li:nth-child(5) {
+    margin-top: 1.5rem;
+    position: relative;
+    left: 30%;
+}
+.linkRight ul li:nth-child(5), .linkRight ul li:nth-child(5) input {
+    width: 6.5rem;
+}
+.linkRight ul li:nth-child(4), .linkRight ul li textarea  {
+    height: 4.4rem;
+}
+footer {
+    background: #262e39;
+    color: #bfc0c5;
+    text-align: center;
+    font-size: .3rem;
+    padding: .5rem 2rem;
+}
+/*关于start*/
+.aboutbg {
+    height: 14rem;
+}
+.science {
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+.science h3, .newstitle h3 {
+    font-size: 1.5rem;
+}
+.science p {
+	padding: 0 .5rem;
+}
+.we .title {
+    font-size: 1.2rem;
+    padding-top: 1.6rem;
+    background-size: 78% 72%;
+    background-position-y: 1rem;
+    height: 4rem;
+}
+.we .content {
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+}
+.we .content .leftTop, .we .content .rightBottom {
+	width: 2.1rem;
+    height: 2.5rem
+}
+.we .content .main {
+    padding: 2rem .5rem;
+    line-height: 1.2rem;
+}
+.we .content .rightBottom {
+    bottom: 1rem;
+}
+.teamContent h3 {
+    padding-top: 1.5rem;
+}
+.teamContent .momentEn {
+    padding: .2rem 0 .5rem 0;
+}
+.content .main p {
+	line-height: 1.2rem;
+}
+.we .content .leftTop {
+    border: 4px solid #eff3f6;
+    border-right: none;
+    border-bottom: none;
+}
+.we .content .rightBottom {
+    border: 4px solid #eff3f6;
+    border-left: none;
+    border-top: none;
+}
+.solve .team {
+    height: 20rem;
+}
+.experienceAbout {
+	width: 100%;
+	border-radius: 0rem;
+    box-shadow: none;
+    margin-top: -.5rem;
+    padding-top: 1.5rem;
+}
+.we .who {
+    margin: -.5rem 0 .2rem 0;
+}
+.solve .team ul li img {
+    height: 5rem;
+}
+.experienceAbout ul {
+    padding: 0;
+}
+.experienceAbout ul:nth-child(4) {
+	padding-right: 0rem;
+}
+.map {
+    height: 10.5rem;
+}
+.certificate h3 {
+	margin-top: 1rem;
+}
+.certificate ul li img {
+	width: 8rem;
+}
+.certificate .title {
+    padding-bottom: 1rem;
+}
+.protect {
+    margin: 0;
+    height: 4.5rem;
+}
+.protect {
+	padding-top: .5rem;
+	margin: 0 auto;
+}
+.protect p {
+    background-color: unset;
+    width: 100%;
+}
+.protect p img {
+    left: 0;
+}
+.protect p span {
+    top: -1.8rem;
+    left: 0;
+    display: inline-block;
+}
+/*关于end*/
 
-    
+/**新闻start**/
+.newstitle {
+    padding: 5rem 0;
+}
+.news-list ul li {
+	padding-right: 2rem;
+	width: 100%;
+	float: left;
+	padding: 0 0 1rem 3.5rem;
+}
+.news-list ul li .news-date p, .news-list ul li a h3 {
+    font-size: .95rem;
+}
+.newsdetail-content {
+	margin-right: .5rem;
+}
+/**新闻end**/
+/**新闻详情start**/
+.newsdetailtitle {
+    font-size: 1.1rem;
+    padding-top: 22px;
+}
+.newsdetailtime {
+    padding: 0px 0 19px;
+}
+.newsdetailcontent {
+    padding: 25px 0px 25px;
+}
+.newsdetailcontent p {
+    letter-spacing: 0px;
+    line-height: 26px;
+    padding: 0 14px;
+}
+.newschapter {
+	padding: 0 10px;
+}
+.previouschapter, .nextchapter {
+	float: none;
+}
+.nextchapter {
+	line-height: 20px;
+}
+/**新闻详情end**/
+
 
 }
-	
